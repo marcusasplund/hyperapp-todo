@@ -3,7 +3,7 @@
 
 # [demo](https://pap.as/hyperapp/todotouch/)
 
-##installation
+## installation
 
 $git clone https://github.com/marcusasplund/hyperapp-todo.git
 
