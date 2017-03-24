@@ -5,7 +5,7 @@
 
 ##installation
 
-$git clone https://github.com/hyperapp/hyperapp
+$git clone https://github.com/marcusasplund/hyperapp-todo.git
 
 $yarn OR $npm install
 
