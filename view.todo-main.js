@@ -6,7 +6,7 @@ import {modelDisplay} from './view.model-display'
 
 export const todoMain = (model, actions) => 
   <div class="container">
-    <h2>todo <a href="https://glitch.com/edit/#!/jolly-duck"><small>source</small></a></h2>
+    <h2>todo <a href="https://github.com/marcusasplund/hyperapp-todo/tree/glitch"><small>source</small></a></h2>
       {todoList(model, actions)}
       {todoInput(model, actions)}
       {todoListDone(model, actions)}
