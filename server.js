@@ -4,9 +4,9 @@ const { createServer } = require("http")
 
 createServer(({ url }, res) => {
   if (url === "/bundle.js") {
-    
+
     var browserify = require('browserify');
-    browserify(`${__dirname}/index.js`)
+    browserify(`${__dirname}/app/index.js`)
       .transform(require('browserify-css'), {global: true})
       .transform("babelify", {
         presets: ["react", "latest"],
@@ -27,5 +27,3 @@ createServer(({ url }, res) => {
     res.end()
   }
 }).listen(8080)
-
-
