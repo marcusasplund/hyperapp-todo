@@ -2,6 +2,8 @@
 
 [![GitHub issues](https://img.shields.io/github/issues/marcusasplund/hyperapp-todo.svg)](https://github.com/marcusasplund/hyperapp-todo/issues)
 
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 [hyperapp.js](https://github.com/hyperapp/hyperapp) todo, test with [hyper-tap](https://github.com/rbiggs/hyper-tap)
 
 # [demo](https://pap.as/hyperapp/todotouch/)
