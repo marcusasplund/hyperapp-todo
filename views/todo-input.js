@@ -1,11 +1,11 @@
 import {h} from 'hyperapp'
 
 export const todoInput = (model, actions) =>
-  <div class="row">
+  <div class='row'>
     <input
-      type="text"
+      type='text'
       onkeyup={e => e.keyCode === 13 && e.target.value !== '' ? actions.add() : null}
       oninput={e => actions.input({value: e.target.value})}
       value={model.input}
-      placeholder={model.placeholder}/>
+      placeholder={model.placeholder} />
   </div>

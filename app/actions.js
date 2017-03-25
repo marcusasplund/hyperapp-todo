@@ -1,4 +1,3 @@
-import {setTodos} from '../utils/local-storage'
 import {addTodo} from '../actions/add-todo'
 import {removeTodo} from '../actions/remove-todo'
 import {toggleTodo} from '../actions/toggle-todo'

@@ -1,9 +1,9 @@
 var eventCache = []
 window.eventCache = eventCache
 
-export function defineEvents(options) {
+export function defineEvents (options) {
   if (Array.isArray(options)) {
-    options.forEach(function(event) {
+    options.forEach(function (event) {
       eventCache.push(event)
     })
   } else {
@@ -16,10 +16,9 @@ export function defineEvents(options) {
   }
 }
 
-export function bindEvents(model, actions) {
-
+export function bindEvents (model, actions) {
   // Event delegator:
-  function delegate(element, event, targetEl, callback, position) {
+  function delegate (element, event, targetEl, callback, position) {
     var delegateEl
     if (!element) element = 'body'
     if (typeof element === 'string') {
@@ -27,7 +26,7 @@ export function bindEvents(model, actions) {
     } else if (element.nodeName) {
       delegateEl = element
     }
-    var eventListener = function(e) {
+    var eventListener = function (e) {
       var target = e.target
       var elements = Array.prototype.slice.apply(delegateEl.querySelectorAll(targetEl))
       do {
@@ -49,7 +48,7 @@ export function bindEvents(model, actions) {
     delegateEl.addEventListener(event, eventListener)
   }
 
-  eventCache.forEach(function(evt, idx) {
+  eventCache.forEach(function (evt, idx) {
     var el
     if (typeof evt.element === 'string') {
       el = document.querySelector(evt.element)
@@ -59,7 +58,7 @@ export function bindEvents(model, actions) {
     if (evt.targetEl) {
       delegate(evt.element, evt.event, evt.targetEl, evt.callback, idx)
     } else {
-      var callback = function(e) {
+      var callback = function (e) {
         evt.callback.call(el, e, model, actions)
       }
       el.addEventListener(evt.event, evt.callback)
@@ -67,7 +66,7 @@ export function bindEvents(model, actions) {
   })
 }
 
-export function unbindEvent(element, event, callback) {
+export function unbindEvent (element, event, callback) {
   var el
   if (typeof element === 'string') {
     el = document.querySelector(element)
@@ -92,8 +91,8 @@ export function unbindEvent(element, event, callback) {
       if (eventCache[ci] && eventCache[ci].element === element && eventCache[ci].event === event) {
         try {
           el.removeEventListener(eventCache[ci].event, eventCache[ci].callback)
-          eventCache.splice(parseInt(ci, 10),1)
-        } catch(err) {}
+          eventCache.splice(parseInt(ci, 10), 1)
+        } catch (err) {}
       }
     }
   } else if (element && event && callback) {
@@ -111,13 +110,13 @@ export function unbindEvent(element, event, callback) {
     el.removeEventListener(eventCache[position].event, eventCache[position].callback)
     eventCache.splice(position, 1)
   } else {
-    return
+
   }
 }
 
-//////////////////////////////
+// ////////////////////////////
 // GESTURES:
-//////////////////////////////
+// ////////////////////////////
 /**
  * Event aliases for desktop and mobile:
  */
@@ -125,39 +124,39 @@ let eventStart, eventEnd, eventMove, eventCancel
 
 // Pointer events for IE11 and MSEdge:
 if (window.navigator.pointerEnabled) {
-  eventStart = 'pointerdown';
-  eventEnd = 'pointerup';
-  eventMove = 'pointermove';
-  eventCancel = 'pointercancel';
+  eventStart = 'pointerdown'
+  eventEnd = 'pointerup'
+  eventMove = 'pointermove'
+  eventCancel = 'pointercancel'
 // Pointer events for IE10 and WP8:
 } else if (window.navigator.msPointerEnabled) {
-  eventStart = 'MSPointerDown';
-  eventEnd = 'MSPointerUp';
-  eventMove = 'MSPointerMove';
-  eventCancel = 'MSPointerCancel';
+  eventStart = 'MSPointerDown'
+  eventEnd = 'MSPointerUp'
+  eventMove = 'MSPointerMove'
+  eventCancel = 'MSPointerCancel'
 // Touch events for iOS & Android:
 } else if ('ontouchstart' in window) {
-  eventStart = 'touchstart';
-  eventEnd = 'touchend';
-  eventMove = 'touchmove';
-  eventCancel = 'touchcancel';
+  eventStart = 'touchstart'
+  eventEnd = 'touchend'
+  eventMove = 'touchmove'
+  eventCancel = 'touchcancel'
 // Mouse events for desktop:
 } else {
-  eventStart = 'mousedown';
-  eventEnd = 'click';
-  eventMove = 'mousemove';
-  eventCancel = 'mouseout';
+  eventStart = 'mousedown'
+  eventEnd = 'click'
+  eventMove = 'mousemove'
+  eventCancel = 'mouseout'
 }
 export {eventStart, eventEnd, eventMove, eventCancel}
 
 // Delegate Events:
-function delegateTheEvent(options) {
+function delegateTheEvent (options) {
   var element = options.element
   var root = options.root || document.body
   var type = options.type
   var callback = options.callback
   if (typeof root === 'string') root = document.querySelector(root)
-  var eventListener = function(e) {
+  var eventListener = function (e) {
     var target = e.target
     var elements
     if (element.nodeType) elements = [element]
@@ -176,7 +175,7 @@ function delegateTheEvent(options) {
 }
 
 // Fire gesture on element:
-export function trigger(el, event, data) {
+export function trigger (el, event, data) {
   if (!event) {
     console.error('No event was provided. You do need to provide one.')
     return
@@ -190,7 +189,7 @@ export function trigger(el, event, data) {
   }
 }
 
-var enableGestures = function() {
+var enableGestures = function () {
   var touch = {}
   var touchTimeout
   var swipeTimeout
@@ -201,16 +200,16 @@ var enableGestures = function() {
   if (/android/img.test(navigator.userAgent)) singleTapDelay = 200
   var longTapTimeout
 
-  function parentIfText(node) {
+  function parentIfText (node) {
     return 'tagName' in node ? node : node.parentNode
   }
 
-  function swipeDirection(x1, x2, y1, y2) {
+  function swipeDirection (x1, x2, y1, y2) {
     return Math.abs(x1 - x2) >=
       Math.abs(y1 - y2) ? (x1 - x2 > 0 ? 'left' : 'right') : (y1 - y2 > 0 ? 'up' : 'down')
   }
 
-  function longTap() {
+  function longTap () {
     longTapTimeout = null
     if (touch.last) {
       try {
@@ -222,12 +221,12 @@ var enableGestures = function() {
     }
   }
 
-  function cancelLongTap() {
+  function cancelLongTap () {
     if (longTapTimeout) clearTimeout(longTapTimeout)
     longTapTimeout = null
   }
 
-  function cancelAll() {
+  function cancelAll () {
     if (touchTimeout) clearTimeout(touchTimeout)
     if (tapTimeout) clearTimeout(tapTimeout)
     if (swipeTimeout) clearTimeout(swipeTimeout)
@@ -239,7 +238,7 @@ var enableGestures = function() {
   /**
    * Execute this after DOM loads:
    */
-  (function() {
+  (function () {
     var now
     var delta
     var body = document.body
@@ -248,7 +247,7 @@ var enableGestures = function() {
     /**
      * Capture start of event:
      */
-    body.addEventListener(eventStart, function(e) {
+    body.addEventListener(eventStart, function (e) {
       now = Date.now()
       delta = now - (touch.last || now)
       if (e.originalEvent) e = e.originalEvent
@@ -268,7 +267,7 @@ var enableGestures = function() {
        */
       } else {
         if (e.touches.length === 1) {
-          if (!!e.target.disabled) return
+          if (e.target.disabled) return
           touch.el = parentIfText(e.touches[0].target)
           touchTimeout && clearTimeout(touchTimeout)
           touch.x1 = e.touches[0].pageX
@@ -291,7 +290,7 @@ var enableGestures = function() {
     /**
      * Capture event move:
      */
-    body.addEventListener(eventMove, function(e) {
+    body.addEventListener(eventMove, function (e) {
       if (e.originalEvent) e = e.originalEvent
       cancelLongTap()
       if (eventMove === 'mousemove') {
@@ -312,16 +311,15 @@ var enableGestures = function() {
     /**
      * Capture event end:
      */
-    body.addEventListener(eventEnd, function(e) {
-
+    body.addEventListener(eventEnd, function (e) {
       cancelLongTap()
-      if (!!touch.el) {
+      if (touch.el) {
         /**
          * Swipe detection:
          */
         if ((touch.x2 && Math.abs(touch.x1 - touch.x2) > gestureLength) ||
           (touch.y2 && Math.abs(touch.y1 - touch.y2) > gestureLength)) {
-          swipeTimeout = setTimeout(function() {
+          swipeTimeout = setTimeout(function () {
             if (touch && touch.el) {
               trigger(touch.el, 'swipe')
               trigger(touch.el, 'swipe' + (swipeDirection(touch.x1, touch.x2, touch.y1, touch.y2)))
@@ -336,7 +334,7 @@ var enableGestures = function() {
           /**
            * Delay by one tick so we can cancel the 'tap' event if 'scroll' fires:
            */
-          tapTimeout = setTimeout(function() {
+          tapTimeout = setTimeout(function () {
             /**
              * Trigger double tap immediately:
              */
@@ -346,17 +344,15 @@ var enableGestures = function() {
                 e.preventDefault()
                 touch = {}
               }
-
             } else {
               /**
                * Trigger tap after singleTapDelay:
                */
-              touchTimeout = setTimeout(function() {
+              touchTimeout = setTimeout(function () {
                 touchTimeout = null
                 if (touch && touch.el && !touch.move) {
                   trigger(touch.el, 'tap')
                   touch = {}
-
                 } else {
                   /**
                    * Touch moved so cancel tap:
@@ -367,9 +363,8 @@ var enableGestures = function() {
             }
           }, 0)
         }
-
       } else {
-        return
+
       }
     })
     body.addEventListener('touchcancel', cancelAll)

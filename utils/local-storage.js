@@ -1,7 +1,7 @@
-const getTodos = () => 
-  JSON.parse(localStorage.getItem('todos'))
+const getTodos = () =>
+  JSON.parse(window.localStorage.getItem('todos'))
 
-const setTodos = (todos) => 
-  localStorage.setItem('todos', JSON.stringify(todos))
+const setTodos = (todos) =>
+  window.localStorage.setItem('todos', JSON.stringify(todos))
 
 export {getTodos, setTodos}
