@@ -19,3 +19,5 @@
 
     $ npm start
 ````
+
+Open up application at http://localhost:8080/ in browser
