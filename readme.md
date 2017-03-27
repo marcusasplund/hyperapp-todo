@@ -12,7 +12,9 @@
 
 ````
     $ git clone https://github.com/marcusasplund/hyperapp-todo.git
-
+ 
+    $ cd hyperapp-todo
+ 
     $ yarn OR $ npm install
 
     $ npm start
