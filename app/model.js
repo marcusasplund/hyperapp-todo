@@ -1,9 +1,9 @@
-import {getTodos} from '../utils/local-storage'
+import {getTodosFromStorage} from '../utils/local-storage'
 
 const model = {
   input: '',
   placeholder: 'Add new todo',
-  todos: getTodos() || []
+  todos: getTodosFromStorage() || []
 }
 
 export {model}
