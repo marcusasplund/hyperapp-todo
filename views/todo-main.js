@@ -6,7 +6,15 @@ import {modelDisplay} from '../views/model-display'
 
 export const todoMain = (model, actions) =>
   <div class='container'>
-    <h2>todo <a href='https://github.com/marcusasplund/hyperapp-todo/'><small>source</small></a></h2>
+    <header>
+      <h2>todo crud&nbsp;
+        <a href='https://github.com/marcusasplund/hyperapp-todo/'>
+          <small>
+          source
+          </small>
+        </a>
+      </h2>
+    </header>
     {todoList(model, actions)}
     {todoInput(model, actions)}
     {todoListDone(model, actions)}

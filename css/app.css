@@ -5,6 +5,9 @@
 button {
   margin-right: 5px;
 }
+header {
+  padding-top: 5rem;
+}
 [contenteditable]:focus {
   outline: 0px solid transparent;
   border: 1px solid #9b4dca;
