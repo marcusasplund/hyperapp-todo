@@ -6,7 +6,7 @@ import {hasTouchSupport} from '../utils/has-touch-support'
 export const todoItem = (todo, actions) =>
   <div> {
   !hasTouchSupport
-  ? <div class='item row'>
+  ? <div class='row'>
     <div class='column column-15'>
       {removeButton(actions, todo.id)}
       {toggleButton(actions, todo.id)}
