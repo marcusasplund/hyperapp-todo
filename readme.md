@@ -4,7 +4,7 @@
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-[hyperapp.js](https://github.com/hyperapp/hyperapp) todo, test with [hyper-tap](https://github.com/rbiggs/hyper-tap)
+[hyperapp.js](https://github.com/hyperapp/hyperapp) CRUD todo, test with [hyper-tap](https://github.com/rbiggs/hyper-tap) touch support
 
 # [demo](https://pap.as/hyperapp/todotouch/)
 
@@ -12,9 +12,9 @@
 
 ````
     $ git clone https://github.com/marcusasplund/hyperapp-todo.git
- 
+
     $ cd hyperapp-todo
- 
+
     $ yarn OR $ npm install
 
     $ npm start

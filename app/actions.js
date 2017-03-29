@@ -1,6 +1,7 @@
 import {addTodo} from '../actions/add-todo'
 import {removeTodo} from '../actions/remove-todo'
 import {toggleTodo} from '../actions/toggle-todo'
+import {editTodo} from '../actions/edit-todo'
 
 export const actions = {
   add: model => ({
@@ -10,10 +11,16 @@ export const actions = {
   input: (model, {value}) => ({
     input: value
   }),
-  remove: (model, id) => ({
-    todos: removeTodo(model, id)
+  remove: (model, e) => ({
+    todos: removeTodo(model, e)
   }),
-  toggle: (model, id) => ({
-    todos: toggleTodo(model, id)
-  })
+  toggle: (model, e) => ({
+    todos: toggleTodo(model, e)
+  }),
+  edit: (model, e) => ({
+    todos: editTodo(model, e)
+  }),
+  editEnter: (model, e) => {
+    e.target.blur()
+  }
 }
