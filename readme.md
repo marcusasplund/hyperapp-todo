@@ -4,6 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/marcusasplund/hyperapp-todo.svg)](https://github.com/marcusasplund/hyperapp-todo/issues)
 [![Build status](https://travis-ci.org/marcusasplund/hyperapp-todo.svg?branch=master)](https://travis-ci.org/marcusasplund/hyperapp-todo)
 [![dependencies](https://david-dm.org/marcusasplund/hyperapp-todo.svg)](https://david-dm.org/marcusasplund/hyperapp-todo)
+
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 [hyperapp.js](https://github.com/hyperapp/hyperapp) CRUD todo, test with [hyper-tap](https://github.com/rbiggs/hyper-tap) touch support
