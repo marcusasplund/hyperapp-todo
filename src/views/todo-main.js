@@ -1,23 +1,16 @@
 /* eslint-disable no-unused-vars */
 import {h} from 'hyperapp'
-import {todoInput} from './todo-input'
-import {todoList} from './todo-list'
-import {todoListDone} from './todo-list-done'
-import {modelDisplay} from './model-display'
+import {HeaderView} from './header-view'
+import {TodoList} from './todo-list'
+import {TodoInput} from './todo-input'
+import {TodoListDone} from './todo-list-done'
+import {ModelDisplay} from './model-display'
 
 export const todoMain = (model, actions) =>
   <div class='container'>
-    <header>
-      <h2>todo crud&nbsp;
-        <a href='https://github.com/marcusasplund/hyperapp-todo/'>
-          <small>
-          source
-          </small>
-        </a>
-      </h2>
-    </header>
-    {todoList(model, actions)}
-    {todoInput(model, actions)}
-    {todoListDone(model, actions)}
-    {modelDisplay(model)}
+    <HeaderView />
+    <TodoList model={model} actions={actions} />
+    <TodoInput model={model} actions={actions} />
+    <TodoListDone model={model} actions={actions} />
+    <ModelDisplay model={model} />
   </div>

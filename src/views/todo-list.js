@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
 import {h} from 'hyperapp'
-import {todoItem} from './todo-item'
+import {TodoItem} from './todo-item'
 import {hasTouchSupport} from '../utils/has-touch-support'
 
-export const todoList = (model, actions) =>
+export const TodoList = (props) =>
   <div id='todo-list'>
     {hasTouchSupport
        ? <p><small>swipe left to toggle, right to remove, tap to edit</small></p>
        : null}
     {
-        model.todos
+        props.model.todos
         .filter(t => !t.done)
-        .map(t => todoItem(t, actions))
+        .map(t => <TodoItem todo={t} actions={props.actions} />)
       }
   </div>
