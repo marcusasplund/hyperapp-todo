@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import {h} from 'hyperapp'
-import {todoItem} from '../views/todo-item'
+import {todoItem} from './todo-item'
 import {hasTouchSupport} from '../utils/has-touch-support'
 
 export const todoList = (model, actions) =>
