@@ -2,11 +2,11 @@
 import {h} from 'hyperapp'
 import {TodoItem} from './todo-item'
 
-export const TodoListDone = (props) =>
+export const TodoListDone = ({model, actions}) =>
   <div id='todo-list-done'>
     {
-        props.model.todos
+        model.todos
         .filter(t => t.done)
-        .map(t => <TodoItem todo={t} actions={props.actions} />)
+        .map(t => <TodoItem todo={t} actions={actions} />)
     }
   </div>

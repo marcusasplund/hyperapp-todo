@@ -4,31 +4,31 @@ import {RemoveButton} from './remove-button'
 import {ToggleButton} from './toggle-button'
 import {hasTouchSupport} from '../utils/has-touch-support'
 
-export const TodoItem = (props) =>
+export const TodoItem = ({todo, actions}) =>
   <div> {
   !hasTouchSupport
   ? <div class='row'>
     <div class='column column-15'>
-      <RemoveButton actions={props.actions} id={props.todo.id} />
-      <ToggleButton actions={props.actions} id={props.todo.id} />
+      <RemoveButton actions={actions} id={todo.id} />
+      <ToggleButton actions={actions} id={todo.id} />
     </div>
     <div
-      class={props.todo.done ? 'done column column-85' : 'column column-85'}
+      class={todo.done ? 'done column column-85' : 'column column-85'}
       contenteditable
-      data-uuid={props.todo.id}
-      onkeyup={e => e.keyCode === 13 ? props.actions.editEnter(e) : null}
-      oninput={e => (props.todo.value = e.target.textContent)}
-      onblur={e => props.actions.edit(e)}>
-      {props.todo.value}
+      data-uuid={todo.id}
+      onkeyup={e => e.keyCode === 13 ? actions.editEnter(e) : null}
+      oninput={e => (todo.value = e.target.textContent)}
+      onblur={e => actions.edit(e)}>
+      {todo.value}
     </div>
   </div>
   : <div
-    class={props.todo.done ? 'done item row' : 'item row'}
+    class={todo.done ? 'done item row' : 'item row'}
     contenteditable
-    data-uuid={props.todo.id}
-    onkeyup={e => e.keyCode === 13 ? props.actions.editEnter(e) : null}
-    oninput={e => (props.todo.value = e.target.textContent)}
-    onblur={e => props.actions.edit(e)}>
-    {props.todo.value}
+    data-uuid={todo.id}
+    onkeyup={e => e.keyCode === 13 ? actions.editEnter(e) : null}
+    oninput={e => (todo.value = e.target.textContent)}
+    onblur={e => actions.edit(e)}>
+    {todo.value}
   </div>
 } </div>
