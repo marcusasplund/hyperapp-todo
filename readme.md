@@ -15,7 +15,7 @@
 ## installation
 
 ````bash
-    $ git clone https://github.com/marcusasplund/hyperapp-todo-simple.git
+    $ git clone https://github.com/marcusasplund/hyperapp-todo.git
 
     $ cd hyperapp-todo-simple
 
