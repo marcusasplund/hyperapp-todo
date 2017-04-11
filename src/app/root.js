@@ -1,3 +1,1 @@
-const root = document.getElementById('todo')
-
-export {root}
+export const root = document.getElementById('todo')
