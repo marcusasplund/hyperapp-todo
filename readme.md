@@ -4,6 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/marcusasplund/hyperapp-todo.svg)](https://github.com/marcusasplund/hyperapp-todo/issues)
 [![Build status](https://travis-ci.org/marcusasplund/hyperapp-todo.svg?branch=master)](https://travis-ci.org/marcusasplund/hyperapp-todo)
 [![dependencies](https://david-dm.org/marcusasplund/hyperapp-todo.svg)](https://david-dm.org/marcusasplund/hyperapp-todo)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4a4f8aba60a64a50b7075f438c6a46e6)](https://www.codacy.com/app/marcusasplund/hyperapp-todo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcusasplund/hyperapp-todo&amp;utm_campaign=Badge_Grade)
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
