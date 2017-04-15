@@ -1,4 +1,10 @@
+import {setTodosInStorage} from '../utils/local-storage'
 import {defineEvents, bindEvents} from '../utils/hyper-tap'
+
+export const hooks = {
+  onUpdate: (oldstore, newstore, data) =>
+      setTodosInStorage(newstore.todos)
+}
 
 export const subscriptions = [
   (model, actions) => {

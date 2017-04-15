@@ -16,7 +16,7 @@ export function defineEvents (options) {
   }
 }
 
-export function bindEvents (model, actions) {
+export function bindEvents (store, actions) {
   // Event delegator:
   function delegate (element, event, targetEl, callback, position) {
     var delegateEl
@@ -33,7 +33,7 @@ export function bindEvents (model, actions) {
         var len = elements.length
         for (var i = 0; i < len; i++) {
           if (target === elements[i]) {
-            callback.call(elements[i], e, model, actions)
+            callback.call(elements[i], e, store, actions)
             break
           }
         }
@@ -59,7 +59,7 @@ export function bindEvents (model, actions) {
       delegate(evt.element, evt.event, evt.targetEl, evt.callback, idx)
     } else {
       var callback = function (e) {
-        evt.callback.call(el, e, model, actions)
+        evt.callback.call(el, e, store, actions)
       }
       el.addEventListener(evt.event, evt.callback)
     }

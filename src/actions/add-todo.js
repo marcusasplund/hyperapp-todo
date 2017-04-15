@@ -1,8 +1,8 @@
 import {generateUUID} from '../utils/generate-uuid'
 
-export const addTodo = (model) => model.todos.concat({
+export const addTodo = (state) => state.todos.concat({
   done: false,
   editing: false,
   id: generateUUID(),
-  value: model.input
+  value: state.input
 })
