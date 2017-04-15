@@ -1,24 +1,22 @@
-# todo
+# todo touch
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/marcusasplund/hyperapp-todo-simple.svg)](https://greenkeeper.io/)
-[![GitHub issues](https://img.shields.io/github/issues/marcusasplund/hyperapp-todo-simple.svg)](https://github.com/marcusasplund/hyperapp-todo-simple/issues)
-[![Build status](https://travis-ci.org/marcusasplund/hyperapp-todo-simple.svg?branch=master)](https://travis-ci.org/marcusasplund/hyperapp-todo-simple)
-[![dependencies](https://david-dm.org/marcusasplund/hyperapp-todo-simple.svg)](https://david-dm.org/marcusasplund/hyperapp-todo-simple)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1fb89f04b2a948f6bba5071519f4df0b)](https://www.codacy.com/app/marcusasplund/hyperapp-todo-simple?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcusasplund/hyperapp-todo-simple&amp;utm_campaign=Badge_Grade)
-
+[![Greenkeeper badge](https://badges.greenkeeper.io/marcusasplund/hyperapp-todo.svg)](https://greenkeeper.io/)
+[![GitHub issues](https://img.shields.io/github/issues/marcusasplund/hyperapp-todo.svg)](https://github.com/marcusasplund/hyperapp-todo/issues)
+[![Build status](https://travis-ci.org/marcusasplund/hyperapp-todo.svg?branch=master)](https://travis-ci.org/marcusasplund/hyperapp-todo)
+[![dependencies](https://david-dm.org/marcusasplund/hyperapp-todo.svg)](https://david-dm.org/marcusasplund/hyperapp-todo)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4a4f8aba60a64a50b7075f438c6a46e6)](https://www.codacy.com/app/marcusasplund/hyperapp-todo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcusasplund/hyperapp-todo&amp;utm_campaign=Badge_Grade)
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-# [hyperapp.js](https://github.com/hyperapp/hyperapp) crud todo
+[hyperapp.js](https://github.com/hyperapp/hyperapp) CRUD todo, test with [hyper-tap](https://github.com/rbiggs/hyper-tap) touch support
 
-## [demo](https://pap.as/hyperapp/todo/)
+# [demo](https://pap.as/hyperapp/todotouch/)
 
-Add some todos, click buttons to delete or toggle state, tap or click text in todo to edit
 
 ## installation
 
 ````bash
-    $ git clone https://github.com/marcusasplund/hyperapp-todo-simple.git
+    $ git clone https://github.com/marcusasplund/hyperapp-todo.git
 
     $ cd hyperapp-todo-simple
 
