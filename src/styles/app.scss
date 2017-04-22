@@ -1,6 +1,34 @@
 
-@import "normalize";
-@import "milligram";
+@import 'normalize';
+@import 'Color';
+@import 'Base';
+@import 'Button';
+@import 'Code';
+@import 'Divider';
+@import 'Form';
+@import 'Grid';
+@import 'Link';
+@import 'Spacing';
+@import 'Typography';
+
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'),
+       url('./fonts/roboto-v16-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/roboto-v16-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Roboto Light Italic'), local('Roboto-LightItalic'),
+       url('./fonts/roboto-v16-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/roboto-v16-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 button {
   margin-right: 5px;
@@ -25,12 +53,13 @@ header {
   color: gray;
   text-decoration: line-through;
 }
-
-.row .column.column-15 {
-    flex: 0 0 15%;
-    max-width: 15%;
+.row {
+  display: flex;
+  flex-direction: row;
 }
-.row .column.column-85 {
-    flex: 0 0 85%;
-    max-width: 85%;
+.left {
+  width: 10rem;
+}
+.right {
+  flex:1;
 }

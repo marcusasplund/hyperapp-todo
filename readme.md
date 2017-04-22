@@ -10,6 +10,9 @@
 
 [hyperapp.js](https://github.com/hyperapp/hyperapp) CRUD todo, test with [hyper-tap](https://github.com/rbiggs/hyper-tap) touch support
 
+
+Offline support with service worker
+
 # [demo](https://pap.as/hyperapp/todotouch/)
 
 
