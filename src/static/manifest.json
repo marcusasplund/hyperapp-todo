@@ -5,7 +5,7 @@
   "scope": "./",
   "display": "fullscreen",
   "start_url": "./",
-  "short_name": "ToDo",
+  "short_name": "todotouch",
   "theme_color": "white",
   "description": "simple crud todo app",
   "orientation": "portrait",
