@@ -17,8 +17,8 @@ export const TodoItem = ({todo, actions}) =>
       contenteditable
       data-uuid={todo.id}
       onkeyup={e => e.keyCode === 13 ? actions.editEnter(e) : null}
-      oninput={e => (todo.value = e.target.textContent)}
-      onblur={e => actions.edit(e)}>
+      oninput={e => (todo.value = e.target.textContent || '')}
+      onblur={actions.edit}>
       {todo.value}
     </div>
   </div>
@@ -27,8 +27,8 @@ export const TodoItem = ({todo, actions}) =>
     contenteditable
     data-uuid={todo.id}
     onkeyup={e => e.keyCode === 13 ? actions.editEnter(e) : null}
-    oninput={e => (todo.value = e.target.textContent)}
-    onblur={e => actions.edit(e)}>
+    oninput={e => (todo.value = e.target.textContent || '')}
+    onblur={actions.edit}>
     {todo.value}
   </div>
 } </div>

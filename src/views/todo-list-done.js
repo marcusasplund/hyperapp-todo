@@ -6,7 +6,7 @@ export const TodoListDone = ({state, actions}) =>
   <div id='todo-list-done'>
     {
         state.todos
-        .filter(t => t.done)
-        .map(t => <TodoItem todo={t} actions={actions} />)
+        .filter(todo => todo.done)
+        .map(todo => <TodoItem todo={todo} actions={actions} />)
     }
   </div>

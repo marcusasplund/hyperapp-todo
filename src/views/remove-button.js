@@ -5,5 +5,5 @@ export const RemoveButton = ({id, actions}) =>
   <button
     class='button button-small button-outline'
     id={id}
-    onclick={e => actions.remove(e)}>x
+    onclick={actions.remove}>x
   </button>
