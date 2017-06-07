@@ -9,8 +9,8 @@ export const TodoList = ({state, actions}) =>
        ? <p><small>swipe left to toggle, right to remove, tap to edit</small></p>
        : null}
     {
-        state.todos
+      state.todos
         .filter(todo => !todo.done)
         .map(todo => <TodoItem todo={todo} actions={actions} />)
-      }
+    }
   </div>

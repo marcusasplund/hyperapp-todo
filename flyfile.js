@@ -98,7 +98,7 @@ export async function watch (fly) {
   // start server
   browserSync({
     server: target,
-    logPrefix: 'hyperapp',
+    logPrefix: 'hyperapp-todo-touch',
     port: process.env.PORT || 4000,
     middleware: [
       require('connect-history-api-fallback')()
