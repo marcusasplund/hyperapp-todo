@@ -1,4 +1,6 @@
 # todo touch
+## DEPRECATED
+Not maintained anymore, but left for reference
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/marcusasplund/hyperapp-todo.svg)](https://greenkeeper.io/)
 [![GitHub issues](https://img.shields.io/github/issues/marcusasplund/hyperapp-todo.svg)](https://github.com/marcusasplund/hyperapp-todo/issues)
